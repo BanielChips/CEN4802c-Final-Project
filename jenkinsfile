@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/BanielChips/CEN4802c-Final-Project.git'
+                git url: 'https://github.com/BanielChips/CEN4802c-Final-Project.git', branch: 'main'
             }
         }
 

@@ -11,7 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh 'mvn clean install -DskipTests=true'
+                    bat 'mvn clean install -DskipTests=true'
                 }
             }
         }
@@ -19,7 +19,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    sh 'mvn test'
+                    bat 'mvn test'
                 }
             }
         }
@@ -27,7 +27,7 @@ pipeline {
         stage('Package') {
             steps {
                 script {
-                    sh 'mvn package'
+                    bat 'mvn package'
                 }
             }
         }

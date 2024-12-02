@@ -19,7 +19,9 @@ pipeline {
         stage('Logstash Startup') {
             steps {
                 script {
-                    bat 'start "" "C:\\logstash-8.16.1\\bin\\logstash.bat" -f "C:\\logstash-8.16.1\\config\\logstash.config"'
+                bat '''
+                    start "Logstash" cmd /c "C:\\logstash-8.16.1\\bin\\logstash.bat -f C:\\logstash-8.16.1\\config\\logstash.config"
+                '''
                 }
             }
         }
